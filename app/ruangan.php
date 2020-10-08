@@ -10,6 +10,6 @@ class ruangan extends Model
 
     public function aset()
     {
-        return $this->hasOne(aset::class);
+        return $this->hasOne(aset::class, 'lokasi', 'lokasi');
     }
 }

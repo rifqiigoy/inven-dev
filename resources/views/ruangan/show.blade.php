@@ -9,7 +9,7 @@
                 <h6 class="m-0 font-weight-bold text-primary mb-2">DATA Ruang {{ $ruangan->lokasi }} / {{ $ruangan->nama_lokasi}}</h6>
             </div>
             <div class="col-auto">
-                <a href="/inventaris/add/create" class="btn btn-sm btn-primary btn-icon-split">
+                <a href="/aset/create" class="btn btn-sm btn-primary btn-icon-split">
                     <span class="icon">
                         <i class="fa fa-plus"></i>
                     </span>

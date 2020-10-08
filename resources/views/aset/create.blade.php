@@ -7,17 +7,21 @@
     </div>
     <div class="card-body">
         <form method="POST" action="/aset">
+            @csrf
             <div class="form-group">
                 <label for="nama">Nama Barang</label>
-                <input type="text" class="form-control" id="nama" name="nama">
+                <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama">
+                <div class="invalid-feedback">Masukan Nama Barang</div>
             </div>
             <div class="form-group">
                 <label for="kode">Kode Barang</label>
-                <input type="text" class="form-control" id="kode" name="kode">
+                <input type="text" class="form-control @error('kode') is-invalid @enderror" id="kode" name="kode">
+                <div class="invalid-feedback">Masukan Kode Barang</div>
             </div>
             <div class="form-group">
                 <label for="register">Nomor Registrasi Barang</label>
-                <input type="text" class="form-control" id="register" name="register">
+                <input type="text" class="form-control @error('register') is-invalid @enderror" id="register" name="register">
+                <div class="invalid-feedback">Masukan Nomor Registrasi Barang</div>
             </div>
             <div class="form-group">
                 <label for="kib">Jenis KIB</label>
@@ -38,15 +42,18 @@
             </div>
             <div class="form-group">
                 <label for="merk">Merek Barang</label>
-                <input type="text" class="form-control" id="merk" name="merk">
+                <input type="text" class="form-control @error('merk') is-invalid @enderror" id="merk" name="merk">
+                <div class="invalid-feedback">Masukan Merek Barang</div>
             </div>
             <div class="form-group">
                 <label for="tahun">Tahun Pengadaan Barang</label>
-                <input type="text" class="form-control" id="tahun" name="tahun">
+                <input type="text" class="form-control @error('tahun') is-invalid @enderror" id="tahun" name="tahun">
+                <div class="invalid-feedback">Masukan Tahun Pengadaan Barang</div>
             </div>
             <div class="form-group">
                 <label for="jumlah">Jumlah Barang</label>
-                <input type="number" maxlength="4" class="form-control" id="jumlah" name="jumlah">
+                <input type="number" maxlength="4" class="form-control @error('jumlah') is-invalid @enderror" id="jumlah" name="jumlah">
+                <div class="invalid-feedback">Masukan Jumlah Barang</div>
             </div>
             <div class="form-group">
                 <label for="harga">Harga Satuan Barang</label>
@@ -54,7 +61,8 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">Rp.</span>
                     </div>
-                <input type="number" class="form-control" id="harga" name="harga">
+                <input type="number" class="form-control @error('harga') is-invalid @enderror" id="harga" name="harga">
+                <div class="invalid-feedback">Masukan Harga Barang</div>
                 </div>
             </div>
             <div class="form-group">
@@ -63,7 +71,8 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">Rp.</span>
                     </div>
-                <input type="number" class="form-control" id="nilai" name="nilai">
+                <input type="number" class="form-control @error('nilai') is-invalid @enderror" id="nilai" name="nilai">
+                <div class="invalid-feedback">Masukan Nilai Tercatat Barang</div>
                 </div>
             </div>
             <div class="form-group">
@@ -72,7 +81,8 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">Rp.</span>
                     </div>
-                <input type="number" class="form-control" id="akumulasi" name="akumulasi">
+                <input type="number" class="form-control @error('akumulasi') is-invalid @enderror" id="akumulasi" name="akumulasi">
+                <div class="invalid-feedback">Masukan Akumulasi Penyusutan Barang</div>
                 </div>
             </div>
             <div class="form-group">

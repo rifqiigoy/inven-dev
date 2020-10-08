@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\aset;
 use Illuminate\Http\Request;
+
+use App\kiba;
+use App\kibc;
+use App\kibd;
 
 class KibController extends Controller
 {
@@ -15,9 +20,42 @@ class KibController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function kiba()
     {
-        //
+        $kiba = kiba::all();
+        return view('kib.kiba', compact('kiba'));
+    }
+    //==========================================================
+    // DATA KIB-B
+    //==========================================================
+    public function kibb()
+    {
+        $kibb = aset::where('kib', '=', 'KIB B')->get();
+        return view('kib.kibb', compact('kibb'));
+    }
+    //==========================================================
+    // DATA KIB-C
+    //==========================================================
+    public function kibc()
+    {
+        $kibc = kibc::all();
+        return view('kib.kibc', compact('kibc'));
+    }
+    //==========================================================
+    // DATA KIB-D
+    //==========================================================
+    public function kibd()
+    {
+        $kibd = kibd::all();
+        return view('kib.kibd', compact('kibd'));
+    }
+    //==========================================================
+    // DATA KIB-E
+    //==========================================================
+    public function kibe()
+    {
+        $kibe = aset::where('kib', '=', 'KIB E')->get();
+        return view('kib.kibe', compact('kibe'));
     }
 
     /**

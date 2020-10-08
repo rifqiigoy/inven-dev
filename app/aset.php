@@ -11,6 +11,6 @@ class aset extends Model
 
     public function ruangan()
     {
-        return $this->belongsTo(ruangan::class);
+        return $this->belongsTo(ruangan::class, 'lokasi', 'lokasi');
     }
 }

@@ -36,16 +36,17 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded text-wrap">
                 <h6 class="collapse-header text-wrap">Data</h6>
-                <a class="collapse-item text-wrap" href="/anggota"><i class="fas fa-fw fa-users mr-2"></i>Anggota</a>
+                <a class="collapse-item text-wrap" href="/user"><i class="fas fa-fw fa-user mr-2"></i>User</a>
+                <a class="collapse-item text-wrap" href="#"><i class="fas fa-fw fa-users mr-2"></i>Anggota</a>
                 <div class="dropdown dropright">
                     <a class="collapse-item text-wrap dropdown-toggle" data-toggle="dropdown"><i class="fas fa-fw fa-table mr-2"></i>KIB</a>
                     <div class="dropdown-menu animated--fade-in">
                         <a class="dropdown-item" href="/kib/kiba">KIB A</a>
-                        <a class="dropdown-item" href="/kib/kiba">KIB B</a>
-                        <a class="dropdown-item" href="/kib/kiba">KIB C</a>
-                        <a class="dropdown-item" href="/kib/kiba">KIB D</a>
-                        <a class="dropdown-item" href="/kib/kiba">KIB E</a>
-                        <a class="dropdown-item" href="/kib/kiba">KIB F</a>
+                        <a class="dropdown-item" href="/kib/kibb">KIB B</a>
+                        <a class="dropdown-item" href="/kib/kibc">KIB C</a>
+                        <a class="dropdown-item" href="/kib/kibd">KIB D</a>
+                        <a class="dropdown-item" href="/kib/kibe">KIB E</a>
+                        <a class="dropdown-item" href="/kib/kibf">KIB F</a>
                     </div>
                 </div>
                 <a class="collapse-item text-wrap" href="/aset"><i class="fas fa-fw fa-warehouse mr-2"></i>Data Aset</a>

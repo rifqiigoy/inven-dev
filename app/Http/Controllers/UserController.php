@@ -2,25 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
-use App\aset;
-use App\ruangan;
 
-class AsetController extends Controller
+class UserController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        $aset = aset::all();
-        return view('aset.index', compact('aset'));
+        $user = User::all();
+        return view('user.index', compact('user'));
     }
 
     /**
@@ -30,9 +30,7 @@ class AsetController extends Controller
      */
     public function create()
     {
-        $create = aset::all();
-        $ruangan = ruangan::all();
-        return view('aset.create', compact('create'), compact('ruangan'));
+        //
     }
 
     /**
@@ -43,23 +41,7 @@ class AsetController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nama' => 'required',
-            'kode' => 'required',
-            'register' => 'required',
-            'kib' => 'required',
-            'lokasi' => 'required',
-            'merk' => 'required',
-            'tahun' => 'required',
-            'jumlah' => 'required',
-            'harga' => 'required',
-            'nilai' => 'required',
-            'akumulasi' => 'required',
-            'keterangan' => 'required'
-        ]);
-
-        aset::create($request->all());
-        return redirect('/aset')->with('status', 'Data Aset Berhasil Ditambahkan !');
+        //
     }
 
     /**

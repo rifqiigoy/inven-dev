@@ -1,6 +1,11 @@
 @extends('layout/table')
 
 @section('content')
+@if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
+@endif
 <div class="card shadow mb-4">
     <div class="card-header py-3">
         <div class="row">
@@ -30,28 +35,20 @@
                 <th>Kode Barang</th>
                 <th>Register</th>
                 <th>Lokasi</th>
-                <th>Tahun Pengadaan</th>
                 <th>Jumlah</th>
-                <th>Harga Satuan (Rp)</th>
-                <th>Nilai Tercatat (Rp)</th>
-                <th>Akumulasi Penyusutan (Rp)</th>
                 <th>Keterangan</th>
             </tr>
           </thead>
           <tbody>
             @foreach( $aset as $data )
             <tr>
-                <th scope="row" class="text-center">{{ $loop->iteration }}</th>
-                <td><a href="/aset/{{ $data->id }}">{{ $data->nama }}</a></td>
+                <th>{{ $loop->iteration }}</th>
+                <td>{{ $data->nama }}</td>
                 <td>{{ $data->merk }}</td>
                 <td>{{ $data->kode }}</td>
                 <td>{{ $data->register }}</td>
-                <td class="text-nowrap"><a href="/ruangan/{{ $data->ruangan->id }}">{{ $data->lokasi }}</a></td>
-                <td>{{ $data->tahun }}</td>
+                <td class="text-nowrap"><a href="/ruangan/{{ $data->ruangan->id}}">{{ $data->lokasi }}</a></td>
                 <td>{{ $data->jumlah }}</td>
-                <td>Rp. {{ $data->harga }}</td>
-                <td>Rp. {{ $data->nilai }}</td>
-                <td>Rp. {{ $data->akumulasi }}</td>
                 <td>{{ $data->keterangan }}</td>
             </tr>
             @endforeach
